@@ -1,3 +1,5 @@
+////// 基础类型
+
 
 // boolean
 let isDone: boolean = false;
@@ -47,8 +49,22 @@ function warnUser(): void {
 
 // null 
 // undefined
+let u: undefined = undefined;
+let n: null = null;
 
 // never 
 // 异常使用
+function error(message: string): never {
+  throw new Error(message);
+}
 
 // object
+declare function create(o: object | null): void;
+
+create({ prop: 0 }); // OK
+create(null); // OK
+
+create(42); // Error
+create("string"); // Error
+create(false); // Error
+create(undefined); // Error
