@@ -16,6 +16,7 @@ let username: string = "bob";
 
 // array
 let list: number[] = [1, 2, 3];
+// array generics
 let list2: Array<number> = [1, 2, 3];
 
 // tuple
