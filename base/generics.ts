@@ -24,6 +24,8 @@
   // 2. 类型推论
   // let output = identity("myString");
 
+  // output = 1
+
 
 // 2.泛型变量
 
@@ -78,3 +80,6 @@
 
 // loggingIdentity(3);
 // loggingIdentity({length: 10, value: 3});
+
+
+export default {}

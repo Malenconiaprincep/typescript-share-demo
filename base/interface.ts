@@ -1,11 +1,10 @@
 // 1.对象属性类型
 
-interface Student {
-  username: string
+interface Student   { // 定义接口
+  username: string  // 接口属性
   age: number
   hobby?: string
   readonly sex: string
-  [propName: string]: any
 }
 
 function CreateStudent(props: Student) {

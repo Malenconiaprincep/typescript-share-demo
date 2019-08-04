@@ -3,11 +3,15 @@ function add(x: number, y: number): number {
   return x + y;
 }
 
+add(1)
+
 
 // 可选参数
 function add2(x: number, y?: number): number {
   return x + y;
 }
+
+add2(1)
 
 // 函数重载
 function padding(all: number);
