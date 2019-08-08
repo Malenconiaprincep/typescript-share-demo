@@ -70,20 +70,29 @@ type Flags = { [K in Keys]: boolean };
 
 // 索引类型
 
-function pluck<T, K extends keyof T>(o: T, names: K[]): T[K][] {
-  return names.map(n => o[n]);
+function pluck<T, K extends keyof T>(o: T, propertyNames: K[]): T[K][] {
+  return propertyNames.map(n => o[n]);
 }
 
-interface Person {
-    name: string;
-    age: number;
+interface Car {
+    manufacturer: string;
+    model: string;
+    year: number;
 }
-let person: Person = {
-    name: 'Jarid',
-    age: 35
+let taxi: Car = {
+    manufacturer: 'Toyota',
+    model: 'Camry',
+    year: 2014
 };
-let strings: string[] = pluck(person, ['name']); // ok, string[]
 
-console.log()
+// Manufacturer and model are both of type string,
+// so we can pluck them both into a typed string array
+let makeAndModel: string[] = pluck(taxi, ['manufacturer', 'model']);
+
+// If we try to pluck model and year, we get an
+// array of a union type: (string | number)[]
+let modelYear = pluck(taxi, ['model', 'year'])
+
+let errorTest = pluck(taxi, ['model1', 'year'])
 
 export default {}
