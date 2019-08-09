@@ -105,3 +105,5 @@
 // console.log(grid2.calculateDistanceFromOrigin({x: 10, y: 10}));
 
 
+export default {}
+

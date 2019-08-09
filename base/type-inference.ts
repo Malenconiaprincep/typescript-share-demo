@@ -39,3 +39,5 @@ function createZoo(): Animals[] {
 function createZoo2() {
   return [new Rhino(), new Elephant(), new Snake()];
 }
+
+export default {}

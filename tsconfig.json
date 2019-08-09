@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
       "module": "commonjs",
+      "baseUrl": "./",
       "target": "es5",
       "noImplicitAny": false,
       "removeComments": true,
       "preserveConstEnums": true,
       "sourceMap": true,
       "jsx": "preserve",
+      "paths": {
+        "*": ["types/*"]
+    }
     //   "forceConsistentCasingInFileNames": true,
     // "noImplicitReturns": true,
     // "noImplicitThis": true,
